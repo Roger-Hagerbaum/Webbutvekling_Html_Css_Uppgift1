@@ -1,0 +1,33 @@
+
+.mainContent{
+   
+    width: 500px;
+}
+.toDoUl li{
+    background-color:crimson;
+    border: solid;
+    margin: 5px;
+    padding: 10px;
+}
+h1{
+    color: rgb(43, 255, 0);
+    
+}
+
+.input{
+   background-color: rgb(157, 255, 0); 
+   padding: 15px;
+}
+
+.checked {
+    text-decoration:line-through;
+    color: gray;
+    opacity: 0.5;
+
+}
+
+.removeTask {
+    font-size: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
