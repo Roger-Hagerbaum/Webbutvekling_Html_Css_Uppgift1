@@ -1,11 +1,13 @@
 body{
-    background: rgb(255,124,124);
-    background: linear-gradient(180deg, rgba(255,124,124,1) 10%, rgba(255,196,196,1) 75%);
+    background: rgb(255,196,196);
+    background: linear-gradient(180deg, rgba(255,196,196,1) 10%, rgba(255,124,124,1) 75%);
     background-attachment: fixed;
 }
 .mainContent{
    
-    width: 500px;
+    background-color: white; 
+    width: 35%;
+    margin: auto;
 }
 .toDoUl li{
     background-color:crimson;
