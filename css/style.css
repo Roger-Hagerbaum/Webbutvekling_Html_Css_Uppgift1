@@ -10,14 +10,19 @@ body{
     background-color: white; 
     width: 35%;
     margin: auto;
+    animation: enter-page 1s;
+    margin-top: 0;
 }
 .toDoUl li{
     list-style: none;
+    
 }
+
 h1{
     color: black;
     font-size: 4em;
     margin-bottom: 0;
+    margin-top: 0;
 }
 
 p{
@@ -27,8 +32,10 @@ input{
     outline-color: blue;
 }
 .input{
-   
+   opacity: 0;
    padding: 15px;
+   animation: enter-text 5s 1s  forwards;
+   animation-direction: inherit;
 }
 
 .checked {
@@ -43,3 +50,25 @@ input{
     margin-left: 10px;
     cursor: pointer;
 }
+@keyframes enter-page{
+    0%{
+        transform: translate(0, 0px);
+        opacity: 0;
+    }
+    50%{
+        transform: translate(0,50px);
+        
+    }
+    100%{
+        transform: translate(0, -200);
+        opacity: 1;
+    }
+  }
+  @keyframes enter-text{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+  }
