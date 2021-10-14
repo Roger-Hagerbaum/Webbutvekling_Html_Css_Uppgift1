@@ -2,6 +2,8 @@ body{
     background: rgb(255,196,196);
     background: linear-gradient(180deg, rgba(255,196,196,1) 10%, rgba(255,124,124,1) 75%);
     background-attachment: fixed;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
 }
 .mainContent{
    
@@ -10,18 +12,22 @@ body{
     margin: auto;
 }
 .toDoUl li{
-    background-color:crimson;
-    border: solid;
-    margin: 5px;
-    padding: 10px;
+    list-style: none;
 }
 h1{
-    color: rgb(43, 255, 0);
-    
+    color: black;
+    font-size: 4em;
+    margin-bottom: 0;
 }
 
+p{
+    margin-top: 0;
+}
+input{
+    outline-color: blue;
+}
 .input{
-   background-color: rgb(157, 255, 0); 
+   
    padding: 15px;
 }
 
