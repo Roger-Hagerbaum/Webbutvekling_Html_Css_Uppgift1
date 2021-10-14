@@ -16,7 +16,7 @@ body{
 .toDoUl li{
     list-style: none;
     font-size: 30px;
-    
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 h1{
@@ -27,8 +27,9 @@ h1{
 }
 
 p{
+    font-family: Arial, Helvetica, sans-serif;
     margin-top: 0;
-    font-size: 30px;
+    font-size: 25px;
 }
 input{
     outline-color: blue;
@@ -41,13 +42,12 @@ button{
    opacity: 0;
    padding: 15px;
    animation: enter-text 1s 1s  forwards;
-   animation-direction: inherit;
+   
 }
 
-.checked {
+.checked span:nth-child(1) {
     text-decoration:line-through;
-    color: gray;
-    opacity: 0.5;
+    animation: completed 10s forwards;
 
 }
 
@@ -76,5 +76,14 @@ button{
     }
     100%{
         opacity: 1;
+    }
+  }
+  @keyframes completed{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0.5;
+        color: gray;
     }
   }
