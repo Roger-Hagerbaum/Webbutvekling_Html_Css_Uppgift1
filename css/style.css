@@ -21,6 +21,10 @@ body{
     animation: add-taks 1s;
 }
 
+li span:nth-child(1):hover{
+    text-decoration: line-through;
+}
+
 h1{
     color: black;
     font-size: 4em;
