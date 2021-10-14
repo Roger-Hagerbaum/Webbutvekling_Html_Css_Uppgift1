@@ -1,4 +1,8 @@
-
+body{
+    background: rgb(255,124,124);
+    background: linear-gradient(180deg, rgba(255,124,124,1) 10%, rgba(255,196,196,1) 75%);
+    background-attachment: fixed;
+}
 .mainContent{
    
     width: 500px;
