@@ -11,14 +11,19 @@ const button = document.querySelector("button");
 const input = document.querySelector("input");
 const toDoList = document.querySelector("#toDoList");
 const completedTasks = document.querySelector("p");
-const inputCheck = document.querySelector("h2")
+const warning = document.querySelector("#warning");
 
 // Add eventlisener and app functions
 button.addEventListener("click", function() {
 // Get the value and create list and span tag
-const toDoTask = input.value;
-    if(toDoTask.length == 0){
-        inputCheck.innerText = "You must write someting";
+if(warning.firstElementChild){
+    warning.removeChild(warning.firstElementChild);
+}
+   const toDoTask = input.value;
+    if(toDoTask.length == 0 || input.value == ""){
+        const createH2 = document.createElement("h2");
+        warning.appendChild(createH2);
+        createH2.innerText = "Input must not be empty";
         return
     }
    
