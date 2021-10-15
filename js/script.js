@@ -14,65 +14,65 @@ const completedTasks = document.querySelector("p");
 const warning = document.querySelector("#warning");
 
 // Add eventlisener and app functions
-button.addEventListener("click", function() {
-// Get the value and create list and span tag
-if(warning.firstElementChild){
-    warning.removeChild(warning.firstElementChild);
-}
-   const toDoTask = input.value;
-    if(toDoTask.length == 0 || input.value == ""){
+button.addEventListener("click", function () {
+    // Get the value and create list and span tag
+    if (warning.firstElementChild) {
+        warning.removeChild(warning.firstElementChild);
+    }
+    const toDoTask = input.value;
+    if (toDoTask.length == 0 || input.value == "") {
         const createH2 = document.createElement("h2");
         warning.appendChild(createH2);
         createH2.innerText = "Input must not be empty";
         return
     }
-   
-// Create li and span html tags
-const task = document.createElement("li");
-toDoList.appendChild(task);
-const taskText = document.createElement("span");
-task.appendChild(taskText);
-taskText.innerText = toDoTask;
-const removeTask = document.createElement("span");
-removeTask.innerHTML = "&#x1F5D1;";
-removeTask.setAttribute("class", "removeTask");
-task.appendChild(removeTask);
 
-// Check uncheced function and completed counter
-taskText.addEventListener("click", function(){
-    if(toDoObj.checked == false){
-    task.classList.toggle("checked");
-    toDoObj.checked = true;
-    completedCount++;
-    }
-    else{
-        task.classList.toggle("checked");
-        toDoObj.checked = false;
-        completedCount--;   
-    }
-    
-    completedTasks.innerText = `${completedCount} completed`;
+    // Create li and span html tags
+    const task = document.createElement("li");
+    toDoList.appendChild(task);
+    const taskText = document.createElement("span");
+    task.appendChild(taskText);
+    taskText.innerText = toDoTask;
+    const removeTask = document.createElement("span");
+    removeTask.innerHTML = "&#x1F5D1;";
+    removeTask.setAttribute("class", "removeTask");
+    task.appendChild(removeTask);
 
-});
+    // Check uncheced function and completed counter
+    taskText.addEventListener("click", function () {
+        if (toDoObj.checked == false) {
+            task.classList.toggle("checked");
+            toDoObj.checked = true;
+            completedCount++;
+        }
+        else {
+            task.classList.toggle("checked");
+            toDoObj.checked = false;
+            completedCount--;
+        }
 
-// remove task function
-removeTask.addEventListener("click", function(){
-    task.remove();
-    toDoArray.splice(toDoObj.index, 1);
-    
-});
-// create a object with the li and span tag
-let toDoObj = {
-    toDoText:toDoTask,
-   checked: false,
-    index: index
-};
-//push the objekt into the array and incress the index
-toDoArray.push(toDoObj);
-index ++;
+        completedTasks.innerText = `${completedCount} completed`;
 
-// reset the input field
-input.value = "";
+    });
+
+    // remove task function
+    removeTask.addEventListener("click", function () {
+        task.remove();
+        toDoArray.splice(toDoObj.index, 1);
+
+    });
+    // create a object with the li and span tag
+    let toDoObj = {
+        toDoText: toDoTask,
+        checked: false,
+        index: index
+    };
+    //push the objekt into the array and incress the index
+    toDoArray.push(toDoObj);
+    index++;
+
+    // reset the input field
+    input.value = "";
 })
 
 
